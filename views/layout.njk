@@ -3,30 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;669;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
-    {% block head %}{% endblock %}
+    {% block head %}
+      <title>Gym Manager</title>
+    {% endblock %}
   </head>
   <body>
-    <header>
-      <nav>
-        <div>
-          <a href="">Home</a>
-          <a href="">Instructors</a>
-          <a href="">Members</a>
-          <a href="">Sign in</a>
-        </div>
-      </nav>
-    </header>    
     <main>
-      {% block content %}{% endblock %}
+      <header>
+        <nav>
+          <div>
+            <a href="/">Home</a>
+            <a href="/instructors">Instructors</a>
+            <a href="/members">Members</a>
+            <a href="/signin">Sign in</a>
+          </div>
+        </nav>
+      </header>   
+      {% block content %}
+      {% endblock %}
+      <!--<footer>
+        <div>
+          <p>Todos os direitos reservados, Gym Manager</p>
+        </div>
+      </footer>-->
     </main>
-    <footer>
-      <div>
-        <p>Todos os direitos reservados, Gym Manager</p>
-      </div>
-    </footer>
     {% block scripts %}{% endblock %}
     <script src="/main.js"></script>
   </body>

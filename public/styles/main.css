@@ -1,5 +1,6 @@
 :root {
   --text-color: #111;
+  --header-color: rgb(115, 216, 0);
 }
 * {
   padding: 0;
@@ -17,7 +18,7 @@ a {
     padding: 32px;
     height: 90px;
     width: 100%;
-    background-color: rgb(138, 221, 42);
+    background-color: var(--header-color);
     position: relative;
   }
   header nav {
@@ -27,31 +28,49 @@ a {
   }
   header nav a {
     font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 14px;
     line-height: 25px;
     color: rgb(80, 80, 80);
     margin-right: 14px;
-    font-weight: bold;
     transition: 200ms;
+    position: relative;
+    text-transform: uppercase;
   }
   header nav a:hover {
     color: white;
     opacity: 0.8;
     transition: 100ms;
   }
+  header nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 200ms ease-out;
+  }
+  header nav a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+  }
+  header nav a.active {
+    color: white;
+  }
 
 /* ==== FOOTER ==== */
 footer {
-  position: fixed;
-  bottom: 0;
   height: 50px;
   width: 100%;
   padding-top: 17px;
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(240, 240, 240);
   font-family: 'Orbitron', sans-serif;
+  margin-top: 20px;
 }
 footer div {
   text-align: center;
   color: #111;
-  font-size: 13px;
+  font-size: 11px;
 }
