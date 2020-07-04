@@ -54,12 +54,12 @@ section.avatar {
   .info-card h3 {
     text-transform: uppercase;
     font-weight: bold;
-    color: rgb(138, 221, 42);
+    color: rgb(66, 66, 65);
   }
   .info-card .item  span {
     padding: 8px 16px;
-    background-color: rgb(125, 236, 22);
-    color: #444;
+    background-color: rgb(66, 66, 65);
+    color: white;
     margin-right: 4px;
     margin-top: 8px;
     border-radius: 16px;
@@ -72,8 +72,34 @@ section.avatar {
 input {
   width: 100%;
   outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #555;
 }
 input[type="radio"] {
   width:initial;
   margin-right: 6px;
+}
+input[type="date"] {
+  font-size: 15px;
+}
+input::placeholder {
+  font-size: 15px;
+  font-weight: normal;
+}
+button[type="submit"] {
+  padding: 8px 32px;
+  background-color: rgb(66, 66, 65);
+  margin-top: 32px;
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 400ms;
+}
+button[type="submit"]:hover {
+  opacity: 0.9;
+  transition: 400ms;
 }
