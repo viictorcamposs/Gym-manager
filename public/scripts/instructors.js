@@ -9,6 +9,7 @@ exports.post = function (req, res) {
       return res.send ('Opa! É muito importante para nós da Net.Solutions e para seus futuros clientes que você preencha todos os campos. Assim podemos te conhecer melhor!')
   }
 
+  // MANIPULANDO DATAS NO BACK-END
   req.body.birth = Date.parse (req.body.birth) 
   req.body.created_at = Date.now ()
 
@@ -21,7 +22,6 @@ exports.post = function (req, res) {
 
     return res.redirect ('/instructors')
   })
-  // return res.send ( req.body )
 }
 
 
