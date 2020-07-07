@@ -24,7 +24,6 @@ main {
 section.avatar {
   min-height: 100%;
   width: 100%;
-  background: url('https://source.unsplash.com/collection/8969654/900x900') no-repeat center center / cover;
 }
 
 /* ==== INFO CARD ==== */
@@ -87,7 +86,8 @@ input::placeholder {
   font-size: 15px;
   font-weight: normal;
 }
-button[type="submit"] {
+button[type="submit"],
+a.button {
   padding: 8px 32px;
   background-color: rgb(66, 66, 65);
   margin-top: 32px;
@@ -100,6 +100,14 @@ button[type="submit"] {
   transition: 400ms;
 }
 button[type="submit"]:hover {
+  opacity: 0.9;
+  transition: 400ms;
+}
+a.button {
+  display: block;
+  text-align: center;
+}
+a.button:hover {
   opacity: 0.9;
   transition: 400ms;
 }

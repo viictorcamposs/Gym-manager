@@ -6,48 +6,11 @@
 {% block content %}
   <main>
     <form id="card" method="POST" action="/instructors">
-      <section class="avatar"></section>
+      <section class="avatar"
+      style="background: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80') no-repeat center center / cover;"></section>
       <section class="info-card">
-        
         <h3>Novo(a) instrutor(a)</h3>
-        
-        <div class="item">
-          <div>Foto</div>
-          <div>
-            <input type="url" name="avatar_url" placeholder="https://">
-          </div> 
-        </div>
-
-        <div class="item">
-          <div>Instrutor(a)</div>
-          <div>
-            <input type="text" name="name" placeholder="Nome" >
-          </div> 
-        </div>
-
-        <div class="item">
-          <div>Data de nascimento</div>
-          <div>
-            <input type="date" name="birth" >
-          </div> 
-        </div>
-
-        <div class="item">
-          <div>Sexo</div>
-          <div>
-            <span><input type="radio" name="gender" value="M" checked>Masculino</span>
-            <span><input type="radio" name="gender" value="F">Feminino</span>
-          </div> 
-        </div>
-
-        <div class="item">
-          <div>Especialização</div>
-          <div>
-            <input type="text" name="services"
-            placeholder="Digite..." >
-          </div> 
-        </div>
-        <button type="submit">Salvar</button>
+        {% include 'instructors/fields.njk' %}
       </section>
     </form>
   </main>

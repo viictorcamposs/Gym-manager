@@ -5,41 +5,41 @@
 {% endblock %}
 {% block content %}
   <main>
+    {% for card in data.instructors %}
     <div id="card">
-      <section class="avatar"></section>
-      <section class="info-card">
-        
+      <section class="avatar"
+      style="background: url('{{ card.avatar_url }}') no-repeat center center / cover;"></section>
+      <section class="info-card">        
         <h3>Detalhes</h3>
-        
         <div class="item">
           <div>Instrutor(a)</div>
-          <div>Ycaro Valente</div> 
+          <div>{{ card.name }}</div> 
         </div>
-
         <div class="item">
           <div>Idade</div>
-          <div>23</div> 
+          <div>{{ card.birth }}</div> 
         </div>
-
         <div class="item">
           <div>Sexo</div>
-          <div>Masculino</div> 
+          <div>{{ card.gender }}</div> 
         </div>
-
         <div class="item">
           <div>Acompanhamento</div>
           <div>
-            <span>Musculação</span>
-            <span>Crossfit</span>
+            {% for service in services %}
+            <span>{{ service }}</span>
+            {% endfor %}
           </div> 
         </div>
-
         <div class="item">
           <div>Desde</div>
-          <div>01/01/2019</div> 
+          <div>{{ card.created_at }}</div> 
         </div>
-
       </section>
     </div>
+    {% endfor %}
   </main>
+{% endblock %}
+{% block scripts %}
+  <script src="/instructors.js"></script>
 {% endblock %}
