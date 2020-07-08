@@ -1,37 +1,69 @@
 <div class="item">
   <div>Foto</div>
   <div>
-    <input type="url" name="avatar_url" placeholder="https://">
+    <input 
+      type="url" 
+      name="avatar_url" 
+      placeholder="https://" 
+      value="{{ instructor.avatar_url }}">
   </div> 
 </div>
 
 <div class="item">
   <div>Instrutor(a)</div>
   <div>
-    <input type="text" name="name" placeholder="Nome" >
+    <input 
+    type="text" 
+    name="name" 
+    placeholder="Nome" 
+    value="{{ instructor.name }}">
   </div> 
 </div>
 
 <div class="item">
   <div>Data de nascimento</div>
   <div>
-    <input type="date" name="birth" >
+    <input 
+      type="date" 
+      name="birth" 
+      value="{{ instructor.birth }}">
   </div> 
 </div>
 
 <div class="item">
   <div>Sexo</div>
   <div>
-    <span><input type="radio" name="gender" value="M" checked>Masculino</span>
-    <span><input type="radio" name="gender" value="F">Feminino</span>
+    <span>
+      <input 
+        type="radio" 
+        name="gender" 
+        value="M" 
+        {% if instructor.gender == "M" %}
+          checked
+        {% endif %}> Masculino
+    </span>
+    <span>
+      <input 
+        type="radio" 
+        name="gender" 
+        value="F"
+        {% if instructor.gender == "F" %}
+          checked
+        {% endif %}>
+      Feminino
+    </span>
   </div> 
 </div>
 
 <div class="item">
   <div>Especialização</div>
   <div>
-    <input type="text" name="services"
-    placeholder="Digite..." >
+    <input 
+      type="text" 
+      name="services"
+      placeholder="Digite..."
+      value="{{ instructor.services }}" 
+    >
   </div> 
 </div>
 

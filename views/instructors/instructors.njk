@@ -4,42 +4,42 @@
   <title>Instructors</title>
 {% endblock %}
 {% block content %}
-  <main>
-    {% for card in data.instructors %}
-    <div id="card">
-      <section class="avatar"
-      style="background: url('{{ card.avatar_url }}') no-repeat center center / cover;"></section>
-      <section class="info-card">        
-        <h3>Detalhes</h3>
-        <div class="item">
-          <div>Instrutor(a)</div>
-          <div>{{ card.name }}</div> 
-        </div>
-        <div class="item">
-          <div>Idade</div>
-          <div>{{ card.birth }}</div> 
-        </div>
-        <div class="item">
-          <div>Sexo</div>
-          <div>{{ card.gender }}</div> 
-        </div>
-        <div class="item">
-          <div>Acompanhamento</div>
-          <div>
-            {% for service in services %}
-            <span>{{ service }}</span>
-            {% endfor %}
-          </div> 
-        </div>
-        <div class="item">
-          <div>Desde</div>
-          <div>{{ card.created_at }}</div> 
-        </div>
-      </section>
-    </div>
-    {% endfor %}
-  </main>
+
 {% endblock %}
 {% block scripts %}
   <script src="/instructors.js"></script>
 {% endblock %}
+
+<!--
+    {% for card in data.instructors %}
+      <div class="card">
+        <section class="avatar"
+        style="background: url('{{ card.avatar_url }}') no-repeat center center / cover;"></section>
+        <section class="info-card">        
+          <h3>Detalhes</h3>
+          <div class="item">
+            <div>Instrutor(a)</div>
+            <div>{{ card.name }}</div> 
+          </div>
+          <div class="item">
+            <div>Idade</div>
+            <div>{{ card.birth }}</div> 
+          </div>
+          <div class="item">
+            <div>Sexo</div>
+            <div>{{ card.gender }}</div> 
+          </div>
+          <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+              <span>{{ card.services }}</span>
+            </div> 
+          </div>
+          <div class="item">
+            <div>Desde</div>
+            <div>{{ card.created_at }}</div> 
+          </div>
+        </section>
+      </div>
+    {% endfor %}
+-->

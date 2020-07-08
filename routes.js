@@ -16,13 +16,13 @@ routes.get ('/', function (req, res) {
     return res.render ('instructors/create')
   })
   routes.get ('/instructors/:id', instructors.show)
-
-  routes.get ('/instructors/:id/edit', function (req,res) {
-    return res.render ('instructors/edit', { data })
-  })
-
-  
+  routes.get ('/instructors/:id/edit', instructors.edit)
   routes.post ('/instructors', instructors.post)
+  routes.put ('/instructors', instructors.put)
+  routes.delete ('/instructors', instructors.delete)
+
+
+
 
 // MANIPULANDO PÁGINA MEMBERS
 routes.get ('/members', function (req, res) {
