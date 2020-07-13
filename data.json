@@ -1,22 +1,124 @@
 {
-  "instructors": [
+  "members": [
     {
       "id": 1,
-      "avatar_url": "https://facebook.com/46897984",
-      "name": "Rayssa França",
-      "birth": 888537600000,
-      "gender": "F",
-      "services": "Ballet, Dança",
-      "created_at": 1594042879393
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://facebook.com/468974984",
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/78744870_712621109265006_5172667853332416739_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=ShjMIORA7ecAX-pe1ID&oh=d37fbdf53fac6c062ccb1824ffa2cd06&oe=5F33C086",
       "name": "Victor Campos",
       "birth": 888278400000,
       "gender": "M",
+      "email": "campos.viictor@gmail.com",
+      "blood": "O-",
+      "weight": "68",
+      "height": "174"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/37105642_895506670633904_1416123942388629504_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=wEiNbOyM0e0AX-P7VOm&oh=04922f483a3602d7552d638669cacaa3&oe=5F324041",
+      "name": "Arthur Campos",
+      "birth": 626313600000,
+      "gender": "M",
+      "email": "aarthur.ccampos@gmail.com",
+      "blood": "O-",
+      "weight": "85",
+      "height": "176"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/103975641_552600792050529_867662262119137483_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=_kwT6dPH3lYAX-Nm1t5&oh=51e51e4e314271bab1e41df626e98cbf&oe=5F319754",
+      "name": "Georgia Cavalcanti",
+      "birth": 856224000000,
+      "gender": "F",
+      "email": "georgia.cavalcanti@gmail.com",
+      "blood": "AB-",
+      "weight": "59",
+      "height": "158"
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/81809434_623858755037338_7326553673634245347_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=EEvor92cGiUAX8L2oq2&oh=d89ef318d5b19d0daf3373ece8e15cf0&oe=5F3299CC",
+      "name": "Roberta Miranda",
+      "birth": 958089600000,
+      "gender": "F",
+      "email": "miranda.rob@outlook.com",
+      "blood": "O-",
+      "weight": "55",
+      "height": "162"
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/50593866_1889137101196117_4019511083612411974_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=DMLr8AMEum0AX81opIc&oh=0563fc5424b66a3a8394ed8b826dec6b&oe=5F32C098",
+      "name": "Ítalo Correia",
+      "email": "italo.correia@gmail.com",
+      "birth": 868233600000,
+      "gender": "M",
+      "blood": "O+",
+      "weight": "105",
+      "height": "174"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/72456079_3046448528703907_4987684528396022346_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=RM6l3F4X4i8AX89aNAw&oh=33aa0d7897ba6a175cda3ec83467f517&oe=5F2E8276",
+      "name": "Ycaro Valente",
+      "birth": 831945600000,
+      "gender": "M",
+      "services": "Musculação, Crossfit, Aeróbico",
+      "created_at": 1594127411428
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/66147401_104821834107960_3547382184648981779_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=cO_8WQ5VGesAX-rqo51&oh=f221e488eecd148cd2f05faf06c5ae35&oe=5F2E6D98",
+      "name": "Bruna Borges",
+      "birth": 825206400000,
+      "gender": "F",
       "services": "Musculação, Crossfit",
-      "created_at": 1594043032547
+      "created_at": 1594144156270
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/37592391_430168137476667_7541953268876836864_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=HkgoQtfQP-IAX8tzCsy&oh=d789f201bdb08b1107945c2205634464&oe=5F304BEE",
+      "name": "Nathalia Tercya",
+      "birth": 835660800000,
+      "gender": "F",
+      "services": "Musculação, Funcional, Aeróbico",
+      "created_at": 1594150447357
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/101938110_960757787688155_287037021936412180_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=-TPjUUFjh2oAX-R9YMj&oh=57130c94812a51b5271576cb651cc7d9&oe=5F2E07A5",
+      "name": "Ricardo Valente",
+      "birth": 769651200000,
+      "gender": "M",
+      "services": "Aeróbico, Funcional, Cárdio",
+      "created_at": 1594170514619
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/70119855_255787455398713_6940069692798735029_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=0PxYI3obLc0AX8CZF14&oh=95c090ed30b3b5d86f4b49642cf05bba&oe=5F2CEA78",
+      "name": "Amanda Souza",
+      "birth": 909964800000,
+      "gender": "F",
+      "services": "Nutrição",
+      "created_at": 1594170783950
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/79213910_156898015620831_3369665012890970008_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=0GMRmhzMAW4AX--hdOI&oh=7d53f9aeb779a101d5c4572d4b92d547&oe=5F304C0A",
+      "name": "Yasmim Mendes",
+      "birth": 853200000000,
+      "gender": "F",
+      "services": "Crossfit, Ginástica, Funcional",
+      "created_at": 1594170978591
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-15/e35/49858574_389144481845337_4209200822481066677_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=7E5R6qPjxuIAX-thXhG&oh=8130ba8d286e8d50312df93be756ac85&oe=5F2D81AC",
+      "name": "Stefany Albuquerque",
+      "birth": 923616000000,
+      "gender": "F",
+      "services": "Musculação, Crossfit",
+      "created_at": 1594171157660
     }
   ]
 }

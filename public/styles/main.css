@@ -11,6 +11,9 @@
 a {
   text-decoration: none;
 }
+body {
+  background-color: whitesmoke;
+}
 
 /* ==== HEADER ==== */
   header {
@@ -53,7 +56,7 @@ a {
     transition: width 200ms ease-out;
   }
   header nav a:hover::after {
-    width: 100%;
+    width: 48px;
     transition: width 200ms ease-in-out;
   }
   header nav a.active {
@@ -67,7 +70,7 @@ footer {
   padding-top: 17px;
   background-color: rgb(240, 240, 240);
   font-family: 'Orbitron', sans-serif;
-  margin-top: 20px;
+  margin-top: 35px;
 }
 footer div {
   text-align: center;

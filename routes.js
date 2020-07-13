@@ -1,33 +1,33 @@
 const express = require ('express')
 const routes = express.Router ()
-const instructors = require ('./public/scripts/instructors')
-const data = require ('./data.json')
+const instructors = require ('./controllers/instructors')
+const members = require ('./controllers/members')
 
 // MANIPULANDO PÁGINA HOME
-routes.get ('/', function (req, res) {
+routes.get ('/home', function (req, res) {
   return res.render ('home')
 })
 
 // MANIPULANDO PÁGINA INSTRUCTORS 
-  routes.get ('/instructors', function (req, res) {
-    return res.render ('instructors/instructors', { data })
-  })
-  routes.get ('/instructors/create', function (req, res) {
-    return res.render ('instructors/create')
-  })
-  routes.get ('/instructors/:id', instructors.show)
-  routes.get ('/instructors/:id/edit', instructors.edit)
-  routes.post ('/instructors', instructors.post)
-  routes.put ('/instructors', instructors.put)
-  routes.delete ('/instructors', instructors.delete)
+routes.get ('/instructors', instructors.index)
+routes.put ('/instructors', instructors.put)
+routes.post ('/instructors', instructors.post)
+routes.delete ('/instructors', instructors.delete)
+routes.get ('/instructors/create', instructors.create)
+routes.get ('/instructors/:id', instructors.show)
+routes.get ('/instructors/:id/edit', instructors.edit)
 
 
 
 
 // MANIPULANDO PÁGINA MEMBERS
-routes.get ('/members', function (req, res) {
-  return res.render ('members/members')
-})
+routes.get ('/members', members.index)
+routes.put ('/members', members.put)
+routes.post ('/members', members.post)
+routes.delete ('/members', members.delete)
+routes.get ('/members/create', members.create)
+routes.get ('/members/:id', members.show)
+routes.get ('/members/:id/edit', members.edit)
 
 // MANIPULANDO PÁGINA SIGN IN
 routes.get ('/signin', function (req, res) {

@@ -112,13 +112,13 @@ section.avatar {
     margin-top: 8px;
     background-color: rgb(100, 185, 2);
   }
-  a.button.special {
-    margin-top: 8px;
-    background-color: rgb(100, 185, 2);
-  }
   #form-delete button {
     margin-top: 8px;
     background-color: rgb(211, 34, 34);
+  }
+  a.button.special {
+    margin-top: 8px;
+    background-color: rgb(100, 185, 2);
   }
 
 /* ===== INDEX INSTRUCTORS ===== */

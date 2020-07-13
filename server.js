@@ -1,8 +1,8 @@
 const nunjucks = require ('nunjucks')
 const express = require ('express')
 const routes = require ('./routes')
-const methodOverride = require ('method-override')
 const server = express ()
+const methodOverride = require ('method-override')
  
 server.use (express.urlencoded ( { extended: true } ))
 server.use (express.static ('public/assets'))
