@@ -1,0 +1,30 @@
+{% extends 'layout.njk' %}
+{% block head %}
+  <link rel="stylesheet" href="/instructors.css">
+  <title>Instructors</title>
+{% endblock %}
+{% block content %}
+<div class="card table-container">
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Instrutores</th>
+        <th>Atendimento</th>
+        <th>Card</th>
+      </tr>
+      <tbody>
+        {% for instructor in instructors %}
+          <tr>
+            <td>
+              <span style="background-image: url({{ instructor.avatar_url }});"></span>
+              {{ instructor.name }}
+            </td>
+            <td><span>{{ instructor.services }}</span></td>
+            <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </thead>
+  </table>
+</div>
+{% endblock %}
