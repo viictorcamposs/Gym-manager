@@ -4,9 +4,23 @@ const db = require ('../../config/db')
 module.exports = {
     all ( callback ) {
 
-        db.query ( `SELECT * FROM instructors`, function ( err, results ) {
+        db.query ( `
+            SELECT instructors.*,
+            count ( members ) AS total_students 
+            FROM instructors
+            LEFT JOIN members ON ( members.instructor_id = instructors.id )
+            GROUP BY instructors.id
+            ORDER BY total_students DESC`, function ( err, results ) {
             if ( err ) throw `Database error! ${ err }`
-            callback ( results.rows )
+            const newInstructorsArray = []
+			for ( instructor of results.rows ) {
+				const instructors = {
+					...instructor,
+					services: instructor.services.split (',')
+                }
+				newInstructorsArray.push (instructors)
+			}
+            callback ( newInstructorsArray )
         })
         
     }, 

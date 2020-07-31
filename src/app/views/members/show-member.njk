@@ -1,50 +1,60 @@
 {% extends 'layout.njk' %}
 {% block head %}
-  <link rel="stylesheet" href="/members.css">
-  <title>Instructors</title>
+	<link rel="stylesheet" href="/members.css">
+	<title>Instructors</title>
 {% endblock %}
 {% block content %}
-  <main>
-    <div class="card">
-      <section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover;"></section>
-      <section class="info-card">        
-        <h3>Detalhes</h3>
-        <div class="item">
-          <div>Aluno(a)</div>
-          <div>{{ member.name }}</div> 
-        </div>
-        <div class="item">
-          <div>Email</div>
-          <div>{{ member.email }}</div> 
-        </div>
-        <div class="item">
-          <div>Aniversário</div>
-          <div>{{ member.birth }}</div> 
-        </div>
-        <div class="item">
-          <div>Sexo</div>
-          <div>{{ "Masculino" if member.gender == "M" else "Feminino" }}</div> 
-        </div>
-         <div class="item">
-          <div>Tipo sanguíneo</div>
-          <div>{{ member.blood }}</div> 
-        </div>
-         <div class="item">
-          <div>Peso (kg)</div>
-          <div>{{ member.weight }}</div> 
-        </div>
-         <div class="item">
-          <div>Altura (cm)</div>
-          <div>{{ member.height }}</div> 
-        </div>
-        <div class="item">
+	<main>
+		<div class="card">
+			<section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover;"></section>
+			<section class="info-card">        
+				<h3>Detalhes</h3>
+				<div class="item">
+					<div>Aluno(a)</div>
+					<div>{{ member.name }}</div> 
+				</div>
 
-        <a href="/members/{{ member.id }}/edit" class="button">Editar</a>
-        <a href="/members"class="button second">Voltar</a>
-      </section>
-    </div>
-  </main>
+				<div class="item">
+					<div>Email</div>
+					<div>{{ member.email }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Aniversário</div>
+					<div>{{ member.birth }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Sexo</div>
+					<div>{{ "Masculino" if member.gender == "M" else "Feminino" }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Tipo sanguíneo</div>
+					<div>{{ member.blood }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Peso (kg)</div>
+					<div>{{ member.weight }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Altura (cm)</div>
+					<div>{{ member.height }}</div> 
+				</div>
+
+				<div class="item">
+					<div>Aluno de</div>
+					<div>{{ member.instructor_name }}</div> 
+				</div>
+
+				<a href="/members/{{ member.id }}/edit" class="button">Editar</a>
+				<a href="/members"class="button second">Voltar</a>
+			</section>
+		</div>
+	</main>
 {% endblock %}
 {% block scripts %}
-  <script src="/members.js"></script>
+<script src="/members.js"></script>
 {% endblock %}

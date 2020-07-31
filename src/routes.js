@@ -3,11 +3,6 @@ const routes = express.Router ()
 const instructors = require ('./app/controllers/instructors')
 const members = require ('./app/controllers/members')
 
-// MANIPULANDO PÁGINA HOME
-routes.get ('/home', function (req, res) {
-  return res.render ('home')
-})
-
 // MANIPULANDO PÁGINA INSTRUCTORS 
 routes.get ('/instructors', instructors.index)
 routes.put ('/instructors', instructors.put)
