@@ -1,7 +1,7 @@
 .card {
   min-height: 400px;
   max-width: 850px;
-  margin: 15px auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid white;
@@ -122,9 +122,14 @@ section.avatar {
   }
 
 /* ===== INDEX INSTRUCTORS ===== */
+  div.card-container {
+    position: absolute;
+    width: 100%;
+  }
   .table-container {
     display: block;
     padding: 40px;
+    margin: 30px auto;
   }
   .table-container table {
     border-spacing: 0;
@@ -204,4 +209,28 @@ section.avatar {
     display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
+  }
+
+  /* FILTERS */
+  .table-container .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+  .table-container .header form {
+    text-align: right;
+  }
+  .table-container .header input{
+    width: 300px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  .table-container .header button { 
+    max-width: 100px;
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: normal;
   }

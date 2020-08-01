@@ -1,36 +1,50 @@
 {% extends 'layout.njk' %}
 {% block head %}
-  <link rel="stylesheet" href="/instructors.css">
-  <title>Instructors</title>
+<link rel="stylesheet" href="/instructors.css">
+<title>Instructors</title>
 {% endblock %}
 {% block content %}
-<div class="card table-container">
-  <table width="100%">
-    <thead>
-      <tr>
-        <th>Instrutores</th>
-        <th>Atendimento</th>
-        <th>Alunos</th>
-        <th>Card</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for instructor in instructors %}
-        <tr>
-          <td>
-            <span style="background-image: url({{ instructor.avatar_url }});"></span>
-            {{ instructor.name }}
-          </td>
-          <td>
-            {% for service in instructor.services %}
-              <span>{{ service }}</span>
-            {% endfor %}  
-          </td>
-          <td><span>{{ instructor.total_students }}</span></td>
-          <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+	<div class="card-container">
+		<div class="card table-container">
+			<div class="header">
+				<form action="/instructors" method="GET">
+					<input 
+						class="filter"
+						type="text" 
+						name="filter" 
+						placeholder="Pesquisar por nome ou atendimento..."
+						value="{{ filter }}"
+					>
+					<button type="submit">Filtrar</button>
+				</form>
+			</div>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>Instrutores</th>
+						<th>Atendimento</th>
+						<th>Alunos</th>
+						<th>Card</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for instructor in instructors %}
+						<tr>
+							<td>
+								<span style="background-image: url({{ instructor.avatar_url }});"></span>
+								{{ instructor.name }}
+							</td>
+							<td>
+								{% for service in instructor.services %}
+									<span>{{ service }}</span>
+								{% endfor %}  
+							</td>
+							<td><span>{{ instructor.total_students }}</span></td>
+							<td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 {% endblock %}

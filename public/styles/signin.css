@@ -11,7 +11,6 @@
   margin: 20px auto;
   cursor: pointer;
   transition: 400ms;
-  border: 1px solid white;
   position: relative;
   animation: right 900ms;
   box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.8);

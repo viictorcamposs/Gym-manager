@@ -3,9 +3,18 @@ const { age, date } = require ('../../lib/utils')
 
 module.exports = {
 	index ( req, res ) {
-		Instructor.all ( function ( instructors ) {
-			return res.render ('instructors/instructors', { instructors })
-		})
+		const { filter } = req.query 
+		if ( filter ) {
+			Instructor.findBy ( filter, function ( instructors ) {
+				return res.render ('instructors/instructors', { instructors, filter })			
+			}) 
+		} else if ( filter === "" ) { 
+			return res.redirect ( '/instructors' )
+		} else {
+			Instructor.all ( function ( instructors ) {
+				return res.render ('instructors/instructors', { instructors })
+			})
+		}
 	},
 	create ( req, res ) {
 		return res.render ('instructors/create')
@@ -23,7 +32,7 @@ module.exports = {
 	},
 	show ( req, res ) {
 		Instructor.find ( req.params.id, function ( instructor ) {
-			if ( !instructor ) return res.send ( 'Instructor not found' )
+			if ( !instructor ) return res.send ( 'Instructor not found' ) 
 			instructor.age = age ( instructor.birth )
 			instructor.services = instructor.services.split ( ',' )
 			instructor.created_at = date ( instructor.created_at ).format
