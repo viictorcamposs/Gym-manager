@@ -1,27 +1,29 @@
 {% extends 'layout.njk' %}
 {% block head %}
-  <title>Sign In</title>
-  <link rel="stylesheet" href="/signin.css">
+	<title>Sign In</title>
+	<link rel="stylesheet" href="/signin.css">
 {% endblock %}
 {% block content %}
-  <div class="cards">
-    <section 
-      class="card"
-      style="background: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center / cover;">
-      <a href="/instructors/create">
-        <div>
-          <h1>New <br>Instructor</h1>
-        </div>
-      </a>
-    </section>
-    <section 
-      class="card"
-      style="background: url('https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center / cover;">
-      <a href="/members/create">
-        <div>
-          <h1>New <br>Member</h1>
-        </div>
-      </a>
-    </section>
-  </div>
+	<div class="cards">
+		<section 
+			class="card"
+			style="background: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center / cover;"
+			>
+			<a href="/instructors/create">
+				<div>
+					<h1>New <br>Instructor</h1>
+				</div>
+			</a>
+		</section>
+		<section 
+			class="card"
+			style="background: url('https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center / cover;"
+			>
+			<a href="/members/create">
+				<div>
+					<h1>New <br>Member</h1>
+				</div>
+			</a>
+	 	</section>
+	</div>
 {% endblock %}
