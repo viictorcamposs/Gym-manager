@@ -195,3 +195,52 @@ section.avatar {
     text-transform: uppercase;
     font-size: 12px;
   }
+
+  /* FILTERS */
+  .table-container .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .table-container .header form {
+    text-align: right;
+  }
+  .table-container .header input{
+    width: 300px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  .table-container .header button { 
+    max-width: 100px;
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  /* === pagination === */
+  .table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+  }
+  .table-container .header {
+    margin: 0;
+    align-self: start;
+  }
+  .table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+  }
+  .pagination a,
+  .pagination span {
+    color: #777;
+    margin-right: 16px;
+    transition: 300ms;
+  }
+  .pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid #777;
+  }
