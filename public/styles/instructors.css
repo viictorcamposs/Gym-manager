@@ -215,7 +215,7 @@ section.avatar {
   .table-container .header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin-bottom: 100px;
   }
   .table-container .header form {
     text-align: right;
@@ -233,4 +233,29 @@ section.avatar {
     padding: 8px;
     font-size: 14px;
     font-weight: normal;
+  }
+
+  /* === pagination === */
+  .table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+  }
+  .table-container .header {
+    margin: 0;
+    align-self: start;
+  }
+  .table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+  }
+  .pagination a,
+  .pagination span {
+    color: #777;
+    margin-right: 16px;
+    transition: 300ms;
+  }
+  .pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid #777;
   }
